@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web_server:
+    build: ./
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./:/app
+  db:
+    image: postgres:9.6.2
+    volumes:
+      - storage:/var/lib/postgresql/data
+    restart: "always"
+
+volumes:
+  storage:

@@ -18,7 +18,6 @@ pool.query("CREATE TABLE data(numbers int)", (error, results) => {
         console.error("Error -------> " + error);
         return;
     }
-
     console.log("Table created");
 });
 
