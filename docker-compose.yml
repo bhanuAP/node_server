@@ -7,6 +7,21 @@ services:
       - '8000:8000'
     volumes:
       - ./:/app
+
+  web_server2:
+    build: ./
+    ports:
+      - '8001:8000'
+    volumes:
+      - ./:/app
+
+  web_server3:
+    build: ./
+    ports:
+      - '8002:8000'
+    volumes:
+      - ./:/app
+
   db:
     image: postgres:9.6.2
     volumes:
