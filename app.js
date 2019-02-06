@@ -48,7 +48,7 @@ app.get('/numbers', (req, res) => {
         if (error) throw error;
         let result = results.rows.map(element => element.numbers);
 
-        console.log(results.rows);
+        console.log(result);
         res.send(JSON.stringify(result));
     });
 });
